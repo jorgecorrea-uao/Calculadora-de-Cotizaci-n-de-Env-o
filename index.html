@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejemplo Backend con JSON</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-size: 20px;
+        }
+
+        .elEstilo {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        h1 {
+            color: darkgreen;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        footer{
+            text-align: center;
+            font-size: 15px;
+        }
+
+        table {
+            width: 300px;
+            margin: 20px auto;
+            padding: 5px auto;
+            border: 2px solid;
+            align-content: center;
+        }
+
+        th, td, tr {
+            border: 1px solid;
+        }
+
+        textarea{
+            width: 300px;
+            height: 80px;
+            padding: 5px auto;
+        }
+    </style>    
+    <script type="module" src="Scripts/main.js"></script>
+</head>
+<body>
+    <main> 
+        <div class="elEstilo">
+            <h1>Calculadora de Cotizacion de Envio</h1>
+            <form id="generarTransaccion">
+                <table>
+                    <caption>Formulario de Cotizacion</caption>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>
+                                <input type="text" value="" id="elNombre" name="nombre">
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td>Peso del paquete (kg)</td>
+                            <td><input type="number" value="" id="elPeso" step="0.01" min="0.01" required></td>
+                        </tr>
+                        <tr>
+                            <td>Distancia (km)</td>
+                            <td><input type="number" value="" id="laDistancia" step="0.01" min="0.01" required></td>
+                        </tr>
+                        <tr>
+                            <td>Codigo de descuento</td>
+                            <td><input type="text" value="" id="elCodigo" placeholder="WEB10 o WEB20"></td>
+                        </tr>
+                    </tbody>                           
+                </table>
+            </form>
+            <div class="error" id="error"></div>
+            <div>
+                <textarea id="laRespuesta" readonly>Salida---</textarea>
+            </div>
+            <div>
+                <button id="ejecutar">Calcular</button> 
+                <button id="recordar">Limpiar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        Fuente propia para el curso de Estructura de Datos 1 en la Universidad Autónoma de Occidente
+    </footer>     
+</body>
+</html>
+
+
